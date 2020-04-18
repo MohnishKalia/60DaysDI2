@@ -88,3 +88,6 @@ typings/
 .dynamodb/
 
 photos
+
+credentials.json
+token.json

@@ -86,6 +86,17 @@ module.exports = {
         '"The End"',
         '"The End"',
         '"The End"',
+    ],
+    folderWeekIds: [
+        '1t6g9p8ue-X4IzP4ixKpLMRuJwZVDxF6i',
+        '1sIA-Ks5HDdnmUR8s0L8-Bei2wSE15aCi',
+        '1z1ViuIf6EpZiA7t1mVLAIKJ3PhbW9lys',
+        '1OiJLyZx2WmErhr6FIX1531dvsSOeGfeN',
+        '1unRIgmcNgRqn_jyKEi53BA76VNriM9Au',
+        '18zjn4VWCnaIYpZgzuh-PIR-72ZTMcI72',
+        '1FjEs6A9XjPp13zwQtBd6Xs_IhJGLBP_o',
+        '162BsH_49QRGq2cspt0EAzuGQdHUgQud_',
+        '128yTBwaBogJxNMA7Rze8IQ7i-dPwzz3B',
     ]
 }
 
