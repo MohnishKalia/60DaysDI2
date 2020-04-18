@@ -57,35 +57,33 @@ const oAuth2Client = new google.auth.OAuth2(client_id, client_secret, redirect_u
 oAuth2Client.setCredentials(require('./token.json'));
 
 app.post('/images/upload', upload.single('photo'), (req, res) => {
-    console.log(req.file);
-    console.log(req.body);
     const { photoname } = req.body;
     const ext = path.extname(req.file.filename);
-    
+    const imgPath = `./photos/${req.file.filename}`;
+
     const drive = google.drive({ version: 'v3', auth: oAuth2Client });
     const fileMetadata = {
-        'name': `day${daySpan + 1}_kalia_${payload.topic}${photoname.trim() ? '_' + photoname : ''}.${ext}`,
+        'name': `day${daySpan + 1}_kalia_${payload.topic}${photoname.trim() ? '_' + photoname : ''}${ext}`,
         parents: [folderWeekIds[week - 1]]
     };
     const media = {
-        mimeType: `image/${ext}`,
-        body: fs.createReadStream(`./photos/${req.file.filename}`)
+        mimeType: `image/${ext.substring(1)}`,
+        body: fs.createReadStream(imgPath)
     };
 
-    console.log(fileMetadata)
-    console.log(media);
-    // drive.files.create({
-    //     resource: fileMetadata,
-    //     media: media,
-    //     fields: 'id'
-    // }, function (err, file) {
-    //     if (err) {
-    //         // Handle error
-    //         console.error(err);
-    //     } else {
-    //         console.log('File Id: ', file.id);
-    //     }
-    // });
+    drive.files.create({
+        resource: fileMetadata,
+        media: media,
+        fields: 'id'
+    }, function (err, file) {
+        if (err) {
+            // Handle error
+            console.error(err);
+        } else {
+            console.log('File Id: ', file.id);
+            fs.unlinkSync(imgPath);
+        }
+    });
     res.redirect('/');
 });
 

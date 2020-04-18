@@ -1,3 +1,7 @@
+$(document).ready(function () {
+    bsCustomFileInput.init()
+});
+
 (async () => {
     const photoDiv = document.querySelector("#samplephotos");
     const dateSmall = document.querySelector("#dateSmall");
