@@ -16,7 +16,7 @@
         topic,
     } = payload;
 
-    dateSmall.textContent = `(wk. ${week}, d. ${daySpan})`;
+    dateSmall.textContent = `(week ${week}, day ${daySpan + 1})`;
     daySmall.textContent = `(${day})`
     topicH.textContent = topic;
     locationH.textContent = location;
