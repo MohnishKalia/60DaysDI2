@@ -1,0 +1,29 @@
+{
+  "name": "60DaysDI2",
+  "version": "1.0.0",
+  "description": "60DaysDI2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohnishKalia/60DaysDI2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohnishKalia/60DaysDI2/issues"
+  },
+  "homepage": "https://github.com/MohnishKalia/60DaysDI2#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
