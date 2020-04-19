@@ -13,7 +13,7 @@ const now = new Date();
 const msSpan = now - start;
 const sSpan = msSpan / 1000;
 const daySpan = Math.floor(sSpan / (60 * 60 * 24));
-const week = Math.ceil(daySpan / 7);
+const week = Math.ceil((daySpan + 1) / 7);
 const day = (daySpan) % 7;
 
 const dayMap = [
