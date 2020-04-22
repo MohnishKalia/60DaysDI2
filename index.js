@@ -74,17 +74,12 @@ app.post('/images/upload', upload.single('photo'), (req, res) => {
     drive.files.create({
         resource: fileMetadata,
         media: media,
-        fields: 'id'
-    }, function (err, file) {
-        if (err) {
-            // Handle error
-            console.error(err);
-        } else {
-            console.log('File Id: ', file.id);
-            fs.unlinkSync(imgPath);
-        }
+    }, (err, file) => {
+        const { id, name } = file.data;
+        console.log({ id, name });
+        fs.unlinkSync(imgPath);
+        res.redirect(`/?fileId=${id}`);
     });
-    res.redirect('/');
 });
 
 app.listen(PORT, IPV4, () => console.log(`Server listening on http://${IPV4}:${PORT}`));

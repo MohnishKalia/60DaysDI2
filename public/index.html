@@ -10,11 +10,22 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand mb-0 h1"
-            href="https://docs.google.com/document/d/1i09X7SylpumIyzzPJZmjQphlBZKkKr1lps1AjmIEriY/edit" target="_blank">
+    <nav class="navbar navbar-light bg-light navbar-expand">
+        <span class="navbar-brand mb-0 h1">
             60 Days Dig Img II
-        </a>
+        </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link"
+                    href="https://docs.google.com/document/d/1i09X7SylpumIyzzPJZmjQphlBZKkKr1lps1AjmIEriY">Doc</a>
+                <a class="nav-item nav-link"
+                    href="https://docs.google.com/spreadsheets/d/1fDKRGomiqPsBVuSJ3m0beTPJnRoKSeZ0HlvbThMjVPQ">Sheet</a>
+            </div>
+        </div>
     </nav>
     <div class="container text-center">
         <div class="mt-3 mb-5">
@@ -41,10 +52,9 @@
             </div>
             <button type="submit" class="btn btn-block btn-secondary">Upload Photo</button>
         </form>
-        <!-- 
-        <h1 class="mb-3">Sample Photos</h1>
-        <div id="samplephotos">
-        </div> -->
+
+        <h1 class="mb-3">Link to Image</h1>
+        <a id="photolink" class="text-break">No Link Yet</a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
