@@ -174,6 +174,4 @@ Closeup (macro)
 
 Week Nine
 Four photos showing “the end!”
-
-NEVER NEEDED BTW
 */
