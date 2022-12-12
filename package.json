@@ -20,7 +20,7 @@
   "homepage": "https://github.com/MohnishKalia/60DaysDI2#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "googleapis": "^49.0.0",
     "multer": "^1.4.2"
   },
